@@ -5,6 +5,9 @@
 @import './assets/config/vars/gradients.scss';
 
 // ***** Fonts *****
-@import './assets/config/fonts/fonts.scss'
+@import './assets/config/fonts/fonts.scss';
+@import './assets/config/vars/fonts-size.scss';
 
 // ***** Global styles *****
+@import './assets/config/global/global.scss';
+@import './assets/config/global/animate.scss';
