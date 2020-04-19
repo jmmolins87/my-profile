@@ -1,11 +1,11 @@
 @import '../vars/sizes.scss';
 
 @mixin  text-type ($family, $size, $line, $wright, $style) {
-    font-family: $family;
-    font-size: $size;
-    line-height: $line;
-    font-weight: $wright;
-    font-style: $style;
+    font-family: $family !important;
+    font-size: $size !important;
+    line-height: $line !important;
+    font-weight: $wright !important;
+    font-style: $style !important;
 }
 
 h1 {
@@ -21,10 +21,10 @@ h1 {
 }
 
 h2 {
-    @include text-type($gotham-black, 24px, 30px, 600, normal);
+    @include text-type($gotham-bold, 24px, 30px, 600, normal);
 
     @media screen and (min-width: $md) {
-        @include text-type($gotham-black, 30px, 38px, 600, normal);
+        @include text-type($gotham-bold, 30px, 38px, 600, normal);
     }
 
     @media screen and (min-width: $lg) {
@@ -33,25 +33,25 @@ h2 {
 }
 
 h3 {
-    @include text-type($gotham-black, 18px, 24px, 400, normal);
+    @include text-type($gotham-medium, 18px, 24px, 400, normal);
 
     @media screen and (min-width: $md) {
-        @include text-type($gotham-black, 24px, 30px, 400, normal);
+        @include text-type($gotham-medium, 24px, 30px, 400, normal);
     }
 
     @media screen and (min-width: $lg) {
-        @include text-type($gotham-bold, 30px, 36px, 400, normal);
+        @include text-type($gotham-medium, 30px, 36px, 400, normal);
     }
 }
 
 p, a {
-    @include text-type($gotham-black, 16px, 24px, 300, normal);
+    @include text-type($gotham-thin, 16px, 24px, 300, normal);
 
     @media screen and (min-width: $md) {
-        @include text-type($gotham-black, 16px, 24px, 300, normal);
+        @include text-type($gotham-thin, 16px, 24px, 300, normal);
     }
 
     @media screen and (min-width: $lg) {
-        @include text-type($gotham-bold, 18px, 26px, 300, normal);
+        @include text-type($gotham-thin, 18px, 26px, 300, normal);
     }
 }
