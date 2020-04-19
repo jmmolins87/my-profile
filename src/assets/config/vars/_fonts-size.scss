@@ -45,13 +45,9 @@ h3 {
 }
 
 p, a {
-    @include text-type($gotham-thin, 16px, 24px, 300, normal);
+    @include text-type($gotham-thin, 14px, 20px, 300, normal);
 
     @media screen and (min-width: $md) {
-        @include text-type($gotham-thin, 16px, 24px, 300, normal);
-    }
-
-    @media screen and (min-width: $lg) {
-        @include text-type($gotham-thin, 18px, 26px, 300, normal);
+        @include text-type($gotham-thin, 16px, 22px, 300, normal);
     }
 }
