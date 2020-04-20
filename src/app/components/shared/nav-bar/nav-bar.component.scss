@@ -1,0 +1,38 @@
+@import '../../../../styles.scss';
+
+nav {
+    position: fixed;
+    background: $bg-white-menu;
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0px 3px 15px $shadow-menu;
+    width: 100%;
+    z-index: 10;
+
+    .nav {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0px;
+        }
+    
+        &__logo {
+            width: 42px;
+            height: 42px;
+        }
+    
+        &__mobile {
+            span {
+                display: block;
+                margin-bottom: 9px;
+                width: 44px;
+                height: 1px;
+                background: $bg-icon-menu-mobile;
+    
+                &:last-of-type {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

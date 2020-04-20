@@ -1,9 +1,26 @@
+// ***** Coorp colors *****
+$coorp-greem: #8CC63F;
+$coorp-yellow: #FCEE21;
+$coorp-orange: #FBB03B;
+$coorp-red: #ED1C24;
+$coorp-violet: #FF00FF;
+$coorp-blue: #0000FF;
+$coorp-light-blue: #00FFFF;
+$coorp-light-green: #00FF28;
+$coorp-pink: #ED1E79;
+$coorp-yellow-strong: #FFFF00;
+$coorp-red-strong: #FF0000;
+
 // ***** Texts *****
 $text-white: #ffffff;
+$text-grey-light: #f2f2f2;
 $text-black: #000000;
 
 // ***** Backgrounds *****
 $bg-white: #ffffff;
+$bg-white-menu: rgba($bg-white, .8);
+$bg-grey-light: #f2f2f2;
+$bg-icon-menu-mobile: #707070;
 $bg-black: #000000;
 
 // ***** Borders *****
@@ -13,3 +30,9 @@ $border-black: #000000;
 // ***** Shadows *****
 $shadow-white: #ffffff;
 $shadow-black: #000000;
+$shadow-menu: rgba($shadow-black, .6);
+
+// ***** Gradients *****
+$gradient-white: #ffffff;
+$gradient-transparent: rgba($gradient-white, 0);
+$gradient-grey: #737373;
