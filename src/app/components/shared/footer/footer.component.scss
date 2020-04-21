@@ -1,0 +1,49 @@
+@import '../../../../styles.scss';
+
+footer {
+    background: url('../../../../assets/img/bg-footer-mobile.png') center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 92px 88px;
+
+    .footer {
+        &__item {
+            margin-bottom: 15px;
+            text-align: center;
+            position: relative;
+
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: $text-black-prragraph;
+                @include text ($gotham-medium, 16px, 30px, 600, normal);
+                text-shadow: 0 5px 3px $shadow-grey;
+            }
+        }
+
+        &__logo {
+            margin: auto;
+            width: 117px;
+            height: 117px;
+            margin-bottom: 45px;
+        }
+        
+        &__info {
+            text-shadow: 0 3px 6px $shadow-grey;
+            text-align: center;
+            @include text ($gotham-medium, 14px, 20px, 600, normal);
+
+            span {
+                display: block;
+            }
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+}
