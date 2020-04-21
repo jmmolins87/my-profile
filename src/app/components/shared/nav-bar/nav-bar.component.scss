@@ -2,36 +2,163 @@
 
 nav {
     position: fixed;
-    background: $bg-white-menu;
-    backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0px 3px 15px $shadow-menu;
     width: 100%;
-    z-index: 10;
+    height: 60px;
+    box-shadow: 0 3px 15px 0 $shadow-menu;
+    background-color: $bg-grey-light-80;
+    z-index: 100;
 
     .nav {
-        &__content {
+        position: relative;
+        
+        &__bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 9px 0px;
         }
-    
+
         &__logo {
+            display: block;
             width: 42px;
             height: 42px;
         }
-    
+
         &__mobile {
+            cursor: pointer;
+            
+            @media screen and (min-width: $md) {
+                display: none;
+            }
+            
             span {
                 display: block;
-                margin-bottom: 9px;
                 width: 44px;
                 height: 1px;
-                background: $bg-icon-menu-mobile;
-    
+                margin-bottom: 9px;
+                background: $bg-icon-hamb-mobile;
+                transition: .2s ease-in-out;
+
                 &:last-of-type {
-                    margin-bottom: 0px;
+                    margin-bottom: 0;
                 }
+            }
+
+            &.active {
+                span {
+                    &:nth-of-type(1) {
+                        transition-property: all;
+                        transform: translateY(10px) rotate(-160deg);
+                        transition-delay: .2s;
+                    }
+
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-of-type(3) {
+                        transition-property: all;
+                        transform: translateY(-10px) rotate(160deg);
+                        transition-delay: .4s;
+                    }
+                }
+            }
+        }
+
+        &__menu {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 220px;
+            backdrop-filter: blur(50px);
+            background-color: $bg-black-10;
+            padding: 177px 20px;
+            transform: translateX(-220px);
+            transition: .2s ease-in-out;
+
+            &.active {
+                transform: translateX(0px);
+            }
+
+            @media screen and (min-width: $md) {
+                position: relative;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width: $md) {
+                flex-direction: row;
+            }
+        }
+
+        &__item {
+            margin-bottom: 41px;
+
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+
+            a {
+                color: $text-grey-light;
+
+                .btn-chevron {
+                    color: $text-grey-light;
+                    margin-left: 10px;
+                    transition: .2s ease-in-out;
+
+                    &.rotate {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+
+        &__subMenu {
+            margin-top: 10px;
+            padding-left: 10px;
+            opacity: 0;
+            top: -70px;
+            transition: .2s ease-in-out;
+            height: auto;
+            position: absolute;
+
+            &.show {
+                position: relative;
+                top: 0px;
+                opacity: 1;
+            }
+        }
+
+        &__subItem {
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+
+            a {
+                @include text ($gotham-medium, 14px, 20px, 100, italic)
+            }
+        }
+
+        &__created {
+            position: absolute;
+            text-align: center;
+            bottom: 28px;
+            color: $text-grey-prragraph;
+            letter-spacing: -.45px;
+
+            span {
+                @include text ($gotham-medium, 12px, 28px, 100, normal);
+                display: block;
+                margin-bottom: 10px;
             }
         }
     }

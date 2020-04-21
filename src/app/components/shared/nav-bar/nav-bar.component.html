@@ -1,17 +1,42 @@
 <header>
     <nav>
         <div class="container">
-            <div class="nav__content">
+            <div class="nav__bar">
+
+                <!-- ***** Logo ***** -->
                 <p class="nav__logo">
-                    <a href="javascript:,"><img src="./assets/img/logo.png" alt="logo juanma"></a>
+                    <a href="javascript:;" title="home">
+                        <img src="./assets/img/logo.png" alt="Logo">
+                    </a>
                 </p>
-                <p class="nav__mobile">
-                    <button role="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </p>
+
+                <!-- ***** Menu mobile ***** -->
+                <button (click)="openMenu()" class="nav__mobile" role="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- ***** Menu ***** -->
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="javascript:;" title="Mis herramientas">Mis herramientas</a></li>
+                        <li class="nav__item"><a href="javascript:;" title="Mi historia">Mi historia</a></li>
+                        <li (click)="openSubmenu()" class="nav__item" id="sub-menu"><a href="javascript:;" title="Portfolio">
+                            Portfolio
+                            <button class="btn-chevron" role="menuitem"><i class="fas fa-caret-down"></i></button>
+                        </a>
+                            <div class="nav__subMenu">
+                                <ul class="nav__subList">
+                                    <li class="nav__subItem"><a href="javascript:;" title="Diseño gráfico">Gráfico</a></li>
+                                    <li class="nav__subItem"><a href="javascript:;" title="Diseño web">Web</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__item"><a href="javascript:;" title="Contacto">Contacto</a></li>
+                        <p class="nav__created"><span>Created by</span>Juan María Molins Cortés</p>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

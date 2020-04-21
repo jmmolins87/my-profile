@@ -14,14 +14,17 @@ $coorp-red-strong: #FF0000;
 // ***** Texts *****
 $text-white: #ffffff;
 $text-grey-light: #f2f2f2;
+$text-grey-prragraph: #a1a1a1;
+$text-black-prragraph: #4c4c4c;
 $text-black: #000000;
 
 // ***** Backgrounds *****
 $bg-white: #ffffff;
-$bg-white-menu: rgba($bg-white, .8);
 $bg-grey-light: #f2f2f2;
-$bg-icon-menu-mobile: #707070;
+$bg-grey-light-80: rgba($bg-grey-light, .8);
+$bg-icon-hamb-mobile: #707070;
 $bg-black: #000000;
+$bg-black-10: rgba($bg-black, .1);
 
 // ***** Borders *****
 $border-white: #ffffff;
@@ -35,4 +38,4 @@ $shadow-menu: rgba($shadow-black, .6);
 // ***** Gradients *****
 $gradient-white: #ffffff;
 $gradient-transparent: rgba($gradient-white, 0);
-$gradient-grey: #737373;
+$gradient-grey: #727272;
