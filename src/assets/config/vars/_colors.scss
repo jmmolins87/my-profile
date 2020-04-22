@@ -33,6 +33,7 @@ $border-black: #000000;
 // ***** Shadows *****
 $shadow-white: #ffffff;
 $shadow-black: #000000;
+$shadow-black-10: rgba(#000000, .1);
 $shadow-grey: #939393;
 $shadow-menu: rgba($shadow-black, .6);
 
@@ -40,3 +41,4 @@ $shadow-menu: rgba($shadow-black, .6);
 $gradient-white: #ffffff;
 $gradient-transparent: rgba($gradient-white, 0);
 $gradient-grey: #727272;
+$gradient-city: #7c7c7c;

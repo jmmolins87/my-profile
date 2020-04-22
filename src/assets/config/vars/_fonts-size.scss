@@ -52,8 +52,8 @@ p, a {
 // ***** Estos mixins son para customizar las fuentes en otros documentos *****
 // ***** Mixins *****
 @mixin text ($family, $size, $line, $weight, $style) {
-    font-size: $size;
-    line-height: $line;
-    font-weight: $weight;
-    font-style: $style;
+    font-size: $size !important;
+    line-height: $line !important;
+    font-weight: $weight !important;
+    font-style: $style !important;
 }
