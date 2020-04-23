@@ -107,6 +107,11 @@ nav {
 
             a {
                 color: $text-grey-light;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    text-shadow: 1px 1px 1px $shadow-black;
+                }
 
                 .btn-chevron {
                     color: $text-grey-light;
