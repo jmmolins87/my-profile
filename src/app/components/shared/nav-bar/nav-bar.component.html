@@ -5,7 +5,7 @@
 
                 <!-- ***** Logo ***** -->
                 <p class="nav__logo">
-                    <a href="javascript:;" title="home">
+                    <a [routerLink]="['/home']" title="home">
                         <img src="./assets/img/logo.png" alt="Logo Juan María">
                     </a>
                 </p>
@@ -20,7 +20,7 @@
                 <!-- ***** Menu ***** -->
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="javascript:;" title="Mis herramientas">Mis herramientas</a></li>
+                        <li class="nav__item"><a [routerLink]="['/tools']" title="Mis herramientas">Mis herramientas</a></li>
                         <li class="nav__item"><a href="javascript:;" title="Mi historia">Mi historia</a></li>
                         <li (click)="openSubmenu()" class="nav__item" id="sub-menu"><a href="javascript:;" title="Portfolio">
                             Portfolio
