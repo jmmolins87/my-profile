@@ -129,7 +129,7 @@ section {
 
     // ***** Body *****
     &:nth-of-type(2) {
-        height: auto;
+        height: 100%;
 
         &::before, &::after {
             content: '';
@@ -141,15 +141,15 @@ section {
 
         &::before {
             background: url('../../../assets/img/mobile/tools/bg-workshop-mobile.png') center center repeat-y;
-            background-size: cover;
             top: 0px;
-            height: auto;
+            height: 100%;
         }
 
         &::after {
             @include gradient-vertical ($gradient-white, $gradient-transparent );
             height: 100px;
             top: 0px;
+            height: 150px;
         }
 
         .tools {
@@ -157,6 +157,10 @@ section {
 
             &__description {
                 text-align: center;
+            }
+
+            article {
+                margin-bottom: 100px;
             }
         }
     }
