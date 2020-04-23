@@ -4,6 +4,13 @@
 @import './assets/config/vars/colors.scss';
 @import './assets/config/vars/gradients.scss';
 
+// ***** Extends *****
+// ***** Animations
+@import './assets/config/extends/animations.scss';
+
+// ***** Positions
+@import './assets/config/extends/positions.scss';
+
 // ***** Fonts *****
 @import './assets/config/fonts/fonts.scss';
 @import './assets/config/vars/fonts-size.scss';

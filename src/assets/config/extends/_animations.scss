@@ -1,0 +1,10 @@
+// ***** ***** Animaciones ***** *****
+// ***** Animación de los hero de todas las secciones *****
+.scaleHero {
+    animation: scaleHero .6s;
+
+    @keyframes scaleHero {
+        from {background-size: 95%;}
+        to { background-size: 100%;}
+    }
+}

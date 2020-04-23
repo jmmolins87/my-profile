@@ -1,0 +1,18 @@
+// ***** ***** Posiciones compartidas en diferentes pantallas ***** *****
+// ***** Chevron down heros *****
+.chevronHero {
+    z-index: 1;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .2s ease-in-out;
+    
+    &:hover {
+        bottom: 30px;
+    }
+
+    i {
+        color: $text-grey-light;
+    }
+}
