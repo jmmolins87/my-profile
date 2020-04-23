@@ -1,8 +1,183 @@
-article {
-    img {
+@import '../../../styles.scss';
 
-        &:hover {
-            filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
+section {
+    position: relative;
+
+    // ***** Animated clouds *****
+    .clouds {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    
+        &--hero {
+            img {
+                position: absolute;
+                bottom: 0px;
+                @extend .cloudsAnimated;
+
+                &:nth-of-type(1), 
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4),
+                &:nth-of-type(5) {
+                    height: auto;
+                }
+
+                &:nth-of-type(1) {
+                    width: 1815px;
+                }
+
+                &:nth-of-type(2) {
+                    width: 1301px;
+                }
+
+                &:nth-of-type(3) {
+                    width: 2309px;
+                }
+
+                &:nth-of-type(4) {
+                    width: 1234px;
+                }
+
+                &:nth-of-type(5) {
+                    width: 1615px;
+                }
+            }
+        }
+
+        &--body {
+            img {
+                position: absolute;
+                top: 0px;
+                @extend .cloudsAnimated;
+
+                &:nth-of-type(1), 
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4),
+                &:nth-of-type(5) {
+                    width: auto;
+                }
+
+                &:nth-of-type(1) {
+                    height: 180px;
+                }
+
+                &:nth-of-type(2) {
+                    height: 180px;
+                }
+
+                &:nth-of-type(3) {
+                    height: 180px;
+                }
+
+                &:nth-of-type(4) {
+                    height: 180px;
+                }
+
+                &:nth-of-type(5) {
+                    height: 180px;
+                }
+            }
+        }
+    }
+    
+    // ***** Hero *****
+    &:nth-of-type(1) {
+        height: 100vh;
+
+        h1 {
+            position: relative;
+            top: 37.5%;
+            left: 50%;
+            color: $text-grey-light;
+            @extend .shadowDance;
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0px;
+            width: 100%;
+        }
+        
+        &::before {
+            background: url('../../../assets/img/mobile/tools/bg-tools-mobile.png');
+            background-size: cover;
+            height: 100vh;
+            top: 0px;
+        }
+
+        &::after {
+            @include gradient-vertical ($gradient-transparent, $gradient-white);
+            height: 200px;
+            bottom: 0px;
+        }
+
+        .chevDown {
+            @extend .chevronHero;
+
+            i {
+                color: $text-black-prragraph;
+            }
+        }
+    }
+
+    // ***** Body *****
+    &:nth-of-type(2) {
+        height: auto;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0px;
+            width: 100%;
+        }
+
+        &::before {
+            background: url('../../../assets/img/mobile/tools/bg-workshop-mobile.png') center center repeat-y;
+            background-size: cover;
+            top: 0px;
+            height: auto;
+        }
+
+        &::after {
+            @include gradient-vertical ($gradient-white, $gradient-transparent );
+            height: 100px;
+            top: 0px;
+        }
+
+        .tools {
+            padding-top: 200px;
+
+            &__description {
+                text-align: center;
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));

@@ -1,5 +1,5 @@
 // ***** ***** Animaciones ***** *****
-// ***** Animación de los hero de todas las secciones *****
+// ***** Animación para escalar imagenes *****
 .scaleHero {
     transform: scale(1.1);
     animation: scaleHero 3s;
@@ -8,6 +8,33 @@
         from { transform: scale(1); }
         to { transform: scale(1.1); }
     }
+}
 
-    transform: s;
+// ***** Animación para cambiar el color de la sombra de textos *****
+.shadowDance {
+    animation: shadowDance 20s infinite;
+
+    @keyframes shadowDance {
+        0% { text-shadow: 0px 0px 10px $coorp-green; };
+        10% { text-shadow: 0px 0px 10px $coorp-yellow; };
+        20% { text-shadow: 0px 0px 10px $coorp-orange; };
+        30% { text-shadow: 0px 0px 10px $coorp-red; };
+        40% { text-shadow: 0px 0px 10px $coorp-violet; };
+        50% { text-shadow: 0px 0px 10px $coorp-blue; };
+        60% { text-shadow: 0px 0px 10px $coorp-light-blue; };
+        70% { text-shadow: 0px 0px 10px $coorp-light-green; };
+        80% { text-shadow: 0px 0px 10px $coorp-pink; };
+        90% { text-shadow: 0px 0px 10px $coorp-yellow-strong; };
+        100% { text-shadow: 0px 0px 10px $coorp-red-strong; };
+    }
+}
+
+// ***** Animación para las nubes *****
+.cloudsAnimated {
+    animation: clouds calc(8s * var(--i)) linear infinite;
+
+    @keyframes clouds {
+        0% { transform: translateX( -100% ); };
+        100% { transform: translateX( 100% ); };
+    }
 }
