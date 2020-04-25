@@ -133,9 +133,527 @@ section {
             height: 150px;
         }
 
-        .description {
+        .deco-end-tools {
+            &::after {
+                content: '';
+                background: url('../../../assets/img/mobile/tools/clouds-toools-footer.png') center center no-repeat;
+                background-size: cover;
+                position: absolute;
+                bottom: -60px;
+                left: 0px;
+                display: block;
+                width: 100%;
+                height: 313px;
+            }
+        }
+
+        .info {
             margin: 200px 0px 100px 0px;
             text-align: center;
+        }
+
+        .my-tools {
+            padding-bottom: 200px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 0px;
+                width: 100%;
+            }
+
+            &::before {
+                @include gradient-vertical ($gradient-white, $gradient-transparent );
+                position: absolute;
+                bottom: -62px;
+                height: 62px;
+            }
+
+            &::after {
+                @include gradient-vertical ($gradient-transparent, $gradient-white );
+                position: absolute;
+                bottom: 0px;
+                height: 146px;
+            }
+
+            &__tool {
+                position: relative;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 100px;
+
+                p {
+                    text-align: center;
+                    margin-bottom: 30px;
+
+                    button {
+                        width: 200px;
+                        height: auto;
+                        margin: auto;
+
+                        &:hover {
+                            mix-blend-mode: normal;
+                        }
+                    }
+                }
+
+                .wrap { 
+                    &-description {
+                        padding: 40px 31px;
+                        backdrop-filter: blur(5px);
+                        border-radius: 5px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        h3 {
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            text-align: left;
+                            margin-bottom: 23px;
+                        }
+
+                        .percent {
+                            span {
+                                display: block;
+                                text-align: center;
+                                margin-bottom: 5px;
+                            }
+
+                            margin-bottom: 26px;
+                        }
+                    }
+
+                    &-secondary {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        p {
+                            &:nth-of-type(1) {
+                                text-align: center;
+                            }
+
+                            &:nth-of-type(2) {
+                                text-align: left;
+                            }
+                        }
+
+                        img {
+                            display: block;
+                            width: 55px;
+                            height: auto;
+                            margin: auto;
+                            margin-bottom: 9px;
+                        }
+                    }
+                }
+
+                // ***** ***** All tools custom styles ***** *****
+                // ***** Acrobat *****
+                &:nth-of-type(1) {
+                    
+                    button {
+                        mix-blend-mode: soft-light;
+
+                        &:hover {
+                            @include lightEffect (acrobat, $acrobat-red);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $acrobat-red;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $acrobat-red);
+                            }
+
+                            h3 {
+                                color: $acrobat-red;
+                            }
+                        }
+                    }
+                }
+
+                // ***** Angular *****
+                &:nth-of-type(2) {
+    
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (angular, $angular-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $angular-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $angular-light);
+                            }
+
+                            h3 {
+                                color: $angular-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** animate *****
+                &:nth-of-type(3) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (animate, $animate-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $animate-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $animate-light);
+                            }
+
+                            h3 {
+                                color: $animate-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** bootstrap *****
+                &:nth-of-type(4) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (bootstrap, $bootstrap-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $bootstrap-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $bootstrap-light);
+                            }
+
+                            h3 {
+                                color: $bootstrap-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** css *****
+                &:nth-of-type(5) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (css, $css-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $css-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $css-light);
+                            }
+
+                            h3 {
+                                color: $css-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** git *****
+                &:nth-of-type(6) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (git, $git-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $git-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $git-light);
+                            }
+
+                            h3 {
+                                color: $git-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** html *****
+                &:nth-of-type(7) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (html, $html-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $html-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $html-light);
+                            }
+
+                            h3 {
+                                color: $html-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** illustrator *****
+                &:nth-of-type(8) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (illustrator, $illustrator-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $illustrator-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $illustrator-light);
+                            }
+
+                            h3 {
+                                color: $illustrator-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** indesign *****
+                &:nth-of-type(9) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (indesign, $indesign-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $indesign-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $indesign-light);
+                            }
+
+                            h3 {
+                                color: $indesign-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** jquery *****
+                &:nth-of-type(10) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (jquery, $jquery-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $jquery-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $jquery-light);
+                            }
+
+                            h3 {
+                                color: $jquery-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** js *****
+                &:nth-of-type(11) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (js, $js-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $js-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $js-light);
+                            }
+
+                            h3 {
+                                color: $js-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** photoshop *****
+                &:nth-of-type(12) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (photoshop, $photoshop-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $photoshop-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $photoshop-light);
+                            }
+
+                            h3 {
+                                color: $photoshop-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** sass *****
+                &:nth-of-type(13) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (sass, $sass-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $sass-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $sass-light);
+                            }
+
+                            h3 {
+                                color: $sass-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** wordpress *****
+                &:nth-of-type(14) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (wordpress, $wordpress-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $wordpress-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $wordpress-light);
+                            }
+
+                            h3 {
+                                color: $wordpress-light;
+                            }
+                        }
+                    }
+                }
+
+                // ***** xd *****
+                &:nth-of-type(15) {
+
+                    button {
+                        mix-blend-mode: color-burn;
+
+                        &:hover {
+                            @include lightEffect (xd, $xd-strong);
+                        }
+                    }
+                    
+                    .wrap { 
+                        &-description {    
+                            border: 1px solid $xd-light;
+
+                            &::before {
+                                @include triangle (10px, 10px, 10px, 10px, transparent, transparent, transparent, $xd-light);
+                            }
+
+                            h3 {
+                                color: $xd-light;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

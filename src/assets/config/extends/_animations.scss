@@ -40,10 +40,10 @@
 }
 
 // ***** Animación efecto lampara para los logos de las tools *****
-@mixin lightEffect ($color) {
-    animation: lightEffect 3s;
+@mixin lightEffect ( $name, $color ) {
+    animation: $name 3s;
 
-    @keyframes lightEffect {
+        @keyframes #{ $name }  {
         0% {filter: drop-shadow( 0px 0px 10px $color );}
         5% {filter: drop-shadow( 0px 0px 10px transparent );}
         10% {filter: drop-shadow( 0px 0px 10px $color );}
