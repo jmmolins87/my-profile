@@ -37,12 +37,14 @@ section {
             color: $text-grey-light;
             margin-bottom: 60px;
         }
-
+        
         p {
             @include text ($gotham-medium, 16px, 20px, 500, normal);
-            font-family: $gotham-medium;
-
-            
+            backdrop-filter: blur(5px);
+            text-shadow: 0px 0px 5px $shadow-grey-light;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $border-grey-light;
         }
     }
 

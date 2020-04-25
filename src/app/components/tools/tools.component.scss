@@ -150,6 +150,11 @@ section {
         .info {
             margin: 200px 0px 100px 0px;
             text-align: center;
+            backdrop-filter: blur(5px);
+            text-shadow: 0px 0px 5px $shadow-grey-light;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $border-grey-light;
         }
 
         .my-tools {
