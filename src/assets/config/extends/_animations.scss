@@ -29,6 +29,25 @@
     }
 }
 
+// ***** Animación para cambiar el color de los bordes *****
+.borderDance {
+    animation: borderDance 20s infinite;
+
+    @keyframes borderDance {
+        0% { border: 5px solid $coorp-green; };
+        10% { border: 5px solid $coorp-yellow; };
+        20% { border: 5px solid $coorp-orange; };
+        30% { border: 5px solid $coorp-red; };
+        40% { border: 5px solid $coorp-violet; };
+        50% { border: 5px solid $coorp-blue; };
+        60% { border: 5px solid $coorp-light-blue; };
+        70% { border: 5px solid $coorp-light-green; };
+        80% { border: 5px solid $coorp-pink; };
+        90% { border: 5px solid $coorp-yellow-strong; };
+        100% { border: 5px solid $coorp-red-strong; };
+    }
+}
+
 // ***** Animación para las nubes *****
 .cloudsAnimated {
     animation: clouds calc(8s * var(--i)) linear infinite;
@@ -55,4 +74,23 @@
     }
 
     filter: drop-shadow( 0px 0px 10px $color );
+}
+
+// ***** Animación para cambiar el color de los bordes *****
+@mixin borderDance () {
+    animation: borderDance 20s infinite;
+
+    @keyframes #{borderDance} {
+        0% { border: 5px solid $coorp-green; };
+        10% { border: 5px solid $coorp-yellow; };
+        20% { border: 5px solid $coorp-orange; };
+        30% { border: 5px solid $coorp-red; };
+        40% { border: 5px solid $coorp-violet; };
+        50% { border: 5px solid $coorp-blue; };
+        60% { border: 5px solid $coorp-light-blue; };
+        70% { border: 5px solid $coorp-light-green; };
+        80% { border: 5px solid $coorp-pink; };
+        90% { border: 5px solid $coorp-yellow-strong; };
+        100% { border: 5px solid $coorp-red-strong; };
+    }
 }
