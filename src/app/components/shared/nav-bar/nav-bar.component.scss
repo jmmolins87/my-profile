@@ -8,6 +8,11 @@ nav {
     background-color: $bg-grey-light-80;
     z-index: 100;
 
+    // ***** tablet *****
+    @media screen and (min-width: $md) {
+        height: 70px;
+    }
+
     .nav {
         position: relative;
         
@@ -22,14 +27,16 @@ nav {
             display: block;
             width: 42px;
             height: 42px;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                width: 54px;
+                height: 54px;
+            }
         }
 
         &__mobile {
             cursor: pointer;
-            
-            @media screen and (min-width: $md) {
-                display: none;
-            }
             
             span {
                 display: block;
@@ -80,20 +87,39 @@ nav {
             transform: translateX(-220px);
             transition: .2s ease-in-out;
 
-            &.active {
-                transform: translateX(0px);
-            }
-
+            // ***** tablet *****
             @media screen and (min-width: $md) {
-                position: relative;
+                justify-content: space-between;
+                width: 100vw;
+                height: 124px;
+                padding: 0;
+                transform: translateX(0px);
+
+                // ***** tablet *****
+                @media screen and (min-width: $md) {
+                    transform: translate(0px, -140px);
+            }
+            }
+            
+            &.active {
+                transform: translate(0px, 0px);
+
+                // ***** tablet *****
+                @media screen and (min-width: $md) {
+                        transform: translate(0px, 71px);
+                }
             }
         }
-
+        
         &__list {
             display: flex;
             flex-direction: column;
-
+            
+            // ***** tablet ***** 
             @media screen and (min-width: $md) {
+                max-width: 768px;
+                margin: auto;
+                padding: 32.5px;
                 flex-direction: row;
             }
         }
@@ -103,6 +129,15 @@ nav {
 
             &:last-of-type {
                 margin-bottom: 0px;
+            }
+
+            // ***** tablet ***** 
+            @media screen and (min-width: $md) {
+                margin-right: 66px;
+
+                &:last-of-type {
+                    margin-right: 0px;
+                }
             }
 
             a {
@@ -164,6 +199,11 @@ nav {
                 @include text ($gotham-medium, 12px, 28px, 100, normal);
                 display: block;
                 margin-bottom: 10px;
+            }
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                display: none;
             }
         }
     }
