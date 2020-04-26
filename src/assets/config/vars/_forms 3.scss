@@ -1,0 +1,10 @@
+@mixin triangule-bottom (
+    $width-right, $width-top, $width-left, $width-bottom ,$color-right, $color-top, $color-left, $color-bottom
+    ) {
+    width: 0;
+    height: 0;
+    border-right: $width-right solid $color-right;
+    border-top: $width-top solid $color-top;
+    border-left: $width-left solid $color-left;
+    border-bottom: $width-bottom solid $color-bottom;
+}
