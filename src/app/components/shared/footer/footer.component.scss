@@ -1,14 +1,40 @@
 @import '../../../../styles.scss';
 
 footer {
-    background: url('../../../../assets/img/mobile/footer/bg-footer-mobile.png') center center;
+    background: url('../../../../assets/img/mobile/footer/bg-footer-mobile.png') center center no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 92px 88px;
 
+    // ***** tablet *****
+    @media screen and (min-width: $md) {
+        background: url('../../../../assets/img/tablet/footer/bg-footer-tablet.png') center center no-repeat;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    // ***** desktop *****
+    @media screen and (min-width: $lg) {
+        background: url('../../../../assets/img/desktop/footer/bg-footer-desktop.png') center center no-repeat;
+        padding: 50px;
+    }
+
     .footer {
+        &__list {
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                flex-basis: 50%;
+            }
+
+            // ***** desktop *****
+            @media screen and (min-width: $lg) {
+                flex-basis: 33%;
+            }
+        }
         &__item {
             margin-bottom: 15px;
             text-align: center;
@@ -43,6 +69,16 @@ footer {
 
             i {
                 font-size: 30px;
+            }
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                flex-basis: 50%;
+            }
+
+            // ***** desktop *****
+            @media screen and (min-width: $lg) {
+                flex-basis: 33%;
             }
         }
     }
