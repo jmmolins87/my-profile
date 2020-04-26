@@ -5,6 +5,9 @@ section {
     background: url('../../../assets/img/mobile/home/bg-body-mobile-bn.png');
     background-size: cover;
 
+    // ***** tablet *****
+    background: url('../../../assets/img/tablet/home/bg-body-tablet-bn.png');
+
     &::before, &::after {
         content: '';
         position: absolute;
@@ -18,6 +21,12 @@ section {
         height: 213px;
         top: 0px;
         right: 0px;
+
+        // ***** tablet *****
+        @media screen and (min-width: $md) {
+            background: url('../../../assets/img/tablet/home/wall-crash-tablet.png') top right;
+            height: 487px;
+        }
     }
 
     &::after {
@@ -26,16 +35,34 @@ section {
         width: 100%;
         height: 637px;
         @include gradient-vertical ($gradient-grey, $gradient-transparent);
+
+        // ***** tablet *****
+        @media screen and (min-width: $md) {
+            height: 863px;
+        }
     }
 
     .about {
         position: relative;
         z-index: 1;
         padding-top: 170px;
+        padding-bottom: 259px;
+
+        // ***** tablet *****
+        @media screen and (min-width: $md) {
+            padding-top: 259px;
+            padding-bottom: 312px;
+        }
 
         h2 {
             color: $text-grey-light;
             margin-bottom: 60px;
+
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                margin-bottom: 125px;
+            }
         }
         
         p {
@@ -45,24 +72,49 @@ section {
             padding: 10px;
             border-radius: 5px;
             border: 1px solid $border-grey-light;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                padding: 30px;
+            }
         }
     }
 
     .city {
+        position: relative;
 
-        display: block;
-        height: auto;
-        width: 100%;
-
-        &::after {
+        &::before, &::after {
             content: '';
             position: absolute;
             display: block;
+        }
+
+        &::before {
+            background: url('../../../assets/img/mobile/home/bg-city-mobile.png') center center no-repeat;
+            background-size: cover;
+            height: 305px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                background: url('../../../assets/img/tablet/home/bg-city-tablet.png') center center no-repeat;
+            }
+        }
+
+        &::after {
             bottom: -123px;
             left: 0px;
             width: 100%;
             height: 123px;
             @include gradient-vertical ($gradient-city, $gradient-transparent);
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                height: 101px;
+                bottom: -80px;
+            }
         }
     }
 }

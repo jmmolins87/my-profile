@@ -16,6 +16,11 @@ section {
         background-size: cover;
         background: url('../../../assets/img/mobile/home/hero-mobile.png') center center no-repeat;
         @extend .scaleHero;
+
+        // ***** tablet *****
+        @media screen and (min-width: $md) {
+            background: url('../../../assets/img/tablet/home/hero-tablet.png') center center no-repeat;
+        }
     }
 
     &::after {
@@ -39,12 +44,27 @@ section {
         h3 {
             text-align: center;
             margin-bottom: 10px;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                position: relative;
+                left: -108px;
+                text-align: left;
+                margin-bottom: 0px;
+            }
         }
 
         p {
             color: $text-grey-light;
             font-style: italic;
             text-align: right;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                position: relative;
+                left: 90px;
+                text-align: left;
+            }
         }
     }
 
