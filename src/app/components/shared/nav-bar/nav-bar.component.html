@@ -20,9 +20,14 @@
                 <!-- ***** Menu ***** -->
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a [routerLink]="['/tools']" title="Mis herramientas">Mis herramientas</a></li>
-                        <li class="nav__item"><a href="javascript:;" title="Mi historia">Mi historia</a></li>
-                        <li (click)="openSubmenu()" class="nav__item" id="sub-menu"><a href="javascript:;" title="Portfolio">
+                        <li class="nav__item" routerLinkActive="active">
+                            <a [routerLink]="['/tools']" title="Mis herramientas">Mis herramientas</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="javascript:;" title="Mi historia">Mi historia</a>
+                        </li>
+                        <li (click)="openSubmenu()" class="nav__item" id="sub-menu">
+                            <a href="javascript:;" title="Portfolio">
                             Portfolio
                             <button class="btn-chevron" role="menuitem"><i class="fas fa-caret-down"></i></button>
                         </a>
@@ -33,7 +38,9 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav__item"><a href="javascript:;" title="Contacto">Contacto</a></li>
+                        <li class="nav__item">
+                            <a href="javascript:;" title="Contacto">Contacto</a>
+                        </li>
                         <p class="nav__created"><span>Created by</span>Juan María Molins Cortés</p>
                     </ul>
                 </div>

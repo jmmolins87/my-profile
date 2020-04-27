@@ -75,7 +75,7 @@ section {
             top: 37.5%;
             left: 50%;
             color: $text-grey-light;
-            @extend .shadowDance;
+            @include shadowDance(20s, 10px);
         }
 
         &::before, &::after {

@@ -56,7 +56,7 @@ section {
             backdrop-filter: blur(5px);
             border-radius: 20px;
             padding: 30px;
-            @include borderDance();
+            @include borderDance(5px);
         }
 
         h3 {
