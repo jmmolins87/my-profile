@@ -56,7 +56,7 @@ section {
             backdrop-filter: blur(5px);
             border-radius: 20px;
             padding: 30px;
-            @include borderDance ();
+            @include borderDance();
         }
 
         h3 {
@@ -98,6 +98,6 @@ section {
     }
 
     .chevDown {
-        @extend .chevronHero 
+        @extend .chevronHero
     }
 }

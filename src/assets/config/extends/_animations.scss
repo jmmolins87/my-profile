@@ -34,17 +34,17 @@
     animation: borderDance 20s infinite;
 
     @keyframes borderDance {
-        0% { border: 5px solid $coorp-green; };
-        10% { border: 5px solid $coorp-yellow; };
-        20% { border: 5px solid $coorp-orange; };
-        30% { border: 5px solid $coorp-red; };
-        40% { border: 5px solid $coorp-violet; };
-        50% { border: 5px solid $coorp-blue; };
-        60% { border: 5px solid $coorp-light-blue; };
-        70% { border: 5px solid $coorp-light-green; };
-        80% { border: 5px solid $coorp-pink; };
-        90% { border: 5px solid $coorp-yellow-strong; };
-        100% { border: 5px solid $coorp-red-strong; };
+        0% { border: 2px solid $coorp-green; };
+        10% { border: 2px solid $coorp-yellow; };
+        20% { border: 2px solid $coorp-orange; };
+        30% { border: 2px solid $coorp-red; };
+        40% { border: 2px solid $coorp-violet; };
+        50% { border: 2px solid $coorp-blue; };
+        60% { border: 2px solid $coorp-light-blue; };
+        70% { border: 2px solid $coorp-light-green; };
+        80% { border: 2px solid $coorp-pink; };
+        90% { border: 2px solid $coorp-yellow-strong; };
+        100% { border: 2px solid $coorp-red-strong; };
     }
 }
 
