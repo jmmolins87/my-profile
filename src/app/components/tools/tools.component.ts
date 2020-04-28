@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ToolsService } from '../../interfaces/services/tools.service';
+import { Tools } from '../../interfaces/tools.interface';
 
 @Component({
   selector: 'app-tools',
   templateUrl: './tools.component.html',
   styleUrls: ['./tools.component.scss']
 })
-export class ToolsComponent implements OnInit {
+export class ToolsComponent {
 
-  constructor() { }
+  tools: Tools;
+  public isCollapsed = false;
 
-  ngOnInit(): void {
+  constructor( private _tools: ToolsService ) {
+
+    this._tools.getTools().subscribe( ( dataTools: Tools ) => {
+      this.tools = dataTools;
+    });
   }
 
 }
