@@ -180,14 +180,14 @@ section {
 
                 // ***** tablet *****
                 @media screen and (min-width: $md) {
-                    background: url('../../../assets/img/tablet/tools/clouds-toools-footer.png') center center no-repeat;
+                    background: url('../../../assets/img/tablet/footer/clouds-toools-footer.png') center center no-repeat;
                     height: 326px;
                     bottom: -100px;
                 }   
 
                 // ***** desktop *****
                 @media screen and (min-width: $lg) {
-                    background: url('../../../assets/img/desktop/tools/clouds-toools-footer.png') center center no-repeat;
+                    background: url('../../../assets/img/desktop/footer/clouds-toools-footer.png') center center no-repeat;
                     height: 326px;
                     bottom: -140px;
                 }
