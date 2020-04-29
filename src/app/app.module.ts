@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes, ROUTES } from '@angular/router';
 
 // ***** http *****
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +20,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ***** Angular Material *****
 import { MaterialModule } from './material';
 
+// ***** ngx-bootstrap *****
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+
+const routes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: 'tools', component: ToolsComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +42,14 @@ import { MaterialModule } from './material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    CollapseModule.forRoot(),
+    RouterModule.forRoot(
+      routes, {
+        enableTracing: false,
+        anchorScrolling: 'enabled'
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -42,6 +42,11 @@ section {
             background-size: contain;
             top: -85px;
         }
+
+        // ***** large *****
+        @media screen and (min-width: $xl) {
+            top: -58px;
+        }
     }
 
     &::after {

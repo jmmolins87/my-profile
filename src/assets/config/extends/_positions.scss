@@ -19,13 +19,12 @@
 
         // ***** tablet *****
         @media screen and (min-width: $md) {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         // ***** desktop *****
         @media screen and (min-width: $lg) {
-            font-size: 25px;
-            text-shadow: 0px 5px 1px $shadow-grey;
+            font-size: 22px;
         }
     }
 }

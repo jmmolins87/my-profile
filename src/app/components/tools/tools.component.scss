@@ -248,6 +248,7 @@ section {
                 width: 90%;
                 margin: auto;
                 margin-bottom: 100px;
+                margin-top: 0px;
 
                 p {
                     text-align: center;
@@ -257,6 +258,12 @@ section {
                         width: 200px;
                         height: auto;
                         margin: auto;
+
+                        // ***** tablet desktop *****
+                        @media screen and (min-width: $md) {
+                            width: auto;
+                            height: 200px;
+                        }
 
                         &:hover {
                             mix-blend-mode: normal;
@@ -674,8 +681,8 @@ section {
                         }
                     }
                     
-                    .wrap { 
-                        &-description {    
+                    .wrap {
+                        &-description {
                             border: 1px solid $photoshop-light;
 
                             &::before {
@@ -701,7 +708,7 @@ section {
                     }
                     
                     .wrap { 
-                        &-description {    
+                        &-description {
                             border: 1px solid $sass-light;
 
                             &::before {
@@ -752,8 +759,8 @@ section {
                         }
                     }
                     
-                    .wrap { 
-                        &-description {    
+                    .wrap {
+                        &-description {
                             border: 1px solid $xd-light;
 
                             &::before {
