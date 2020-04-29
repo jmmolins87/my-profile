@@ -45,6 +45,7 @@ section {
         z-index: 1;
         width: 301px;
         color: $text-grey-light;
+        overflow: hidden;
 
         // ***** desktop *****
         @media screen and (min-width: $lg) {

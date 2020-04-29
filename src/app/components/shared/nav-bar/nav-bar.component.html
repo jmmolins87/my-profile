@@ -23,23 +23,28 @@
                         <li class="nav__item" routerLinkActive="active">
                             <a [routerLink]="['/tools']" title="Mis herramientas">Mis herramientas</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="javascript:;" title="Mi historia">Mi historia</a>
+                        <li class="nav__item" routerLinkActive="active">
+                            <a [routerLink]="['/history']" title="Mi historia">Mi historia</a>
                         </li>
                         <li (click)="openSubmenu()" class="nav__item" id="sub-menu">
                             <a href="javascript:;" title="Portfolio">
                             Portfolio
-                            <button class="btn-chevron" role="menuitem"><i class="fas fa-caret-down"></i></button>
+                            <button class="btn-chevron" role="menuitem"><i class="fas fa-caret-down"></i>
+                            </button>
                         </a>
                             <div class="nav__subMenu">
                                 <ul class="nav__subList">
-                                    <li class="nav__subItem"><a href="javascript:;" title="Diseño gráfico">Gráfico</a></li>
-                                    <li class="nav__subItem"><a href="javascript:;" title="Diseño web">Web</a></li>
+                                    <li class="nav__subItem" routerLinkActive="active">
+                                        <a [routerLink]="['/graphic']" title="Diseño gráfico">Gráfico</a>
+                                    </li>
+                                    <li class="nav__subItem" routerLinkActive="active">
+                                        <a [routerLink]="['/web']" title="Diseño web">Web</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav__item">
-                            <a href="javascript:;" title="Contacto">Contacto</a>
+                        <li class="nav__item" routerLinkActive="active">
+                            <a [routerLink]="['/contact']" title="Contacto">Contacto</a>
                         </li>
                         <p class="nav__created"><span>Created by</span>Juan María Molins Cortés</p>
                     </ul>

@@ -22,6 +22,10 @@ import { MaterialModule } from './material';
 
 // ***** ngx-bootstrap *****
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { HistoryComponent } from './components/history/history.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { WebComponent } from './components/web/web.component';
+import { GraphicComponent } from './components/graphic/graphic.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -35,7 +39,11 @@ const routes: Routes = [
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ToolsComponent
+    ToolsComponent,
+    HistoryComponent,
+    ContactComponent,
+    WebComponent,
+    GraphicComponent
   ],
   imports: [
     BrowserModule,
