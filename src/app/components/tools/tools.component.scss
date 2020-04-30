@@ -249,6 +249,13 @@ section {
                 margin: auto;
                 margin-bottom: 100px;
                 margin-top: 0px;
+                flex-basis: 100%;
+
+                // ***** tablet *****
+                flex-basis: calc(50% - 20px);
+
+                // ***** desktop *****
+                flex-basis: calc(33.3% - 50px);
 
                 p {
                     text-align: center;
@@ -271,7 +278,7 @@ section {
                     }
                 }
 
-                .wrap { 
+                .wrap {
                     &-description {
                         padding: 40px 31px;
                         backdrop-filter: blur(5px);
