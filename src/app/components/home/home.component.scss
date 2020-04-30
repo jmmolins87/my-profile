@@ -47,6 +47,11 @@ section {
         color: $text-grey-light;
         overflow: hidden;
 
+        // ***** tablet *****
+        @media screen and (min-width: $md) {
+            width: auto;
+        }
+
         // ***** desktop *****
         @media screen and (min-width: $lg) {
             left: 50%;
@@ -86,7 +91,7 @@ section {
             // ***** tablet *****
             @media screen and (min-width: $md) {
                 position: relative;
-                left: 90px;
+                left: 200px;
                 text-align: left;
             }
 

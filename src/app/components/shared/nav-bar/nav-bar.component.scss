@@ -244,19 +244,24 @@ nav {
             transition: .2s ease-in-out;
             height: auto;
             position: absolute;
+            z-index: -1;
 
-            &::before {
-                content: '';
-                @include triangle (5px, 5px, 5px, 5px, transparent, transparent, transparent, $bg-grey-light);
-                position: absolute;
-                top: -10px;
-                left: 30px;
+            // ***** desktop *****
+            @media screen and (min-width: $lg) {
+                &::before {
+                    content: '';
+                    @include triangle (5px, 5px, 5px, 5px, transparent, transparent, transparent, $bg-grey-light);
+                    position: absolute;
+                    top: -10px;
+                    left: 30px;
+                }
             }
 
             &.show {
                 position: relative;
                 top: 0px;
                 opacity: 1;
+                z-index: 1;
 
                 // ***** desktop *****
                 @media screen and (min-width: $lg) {
