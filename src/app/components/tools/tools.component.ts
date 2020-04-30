@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ToolsComponent {
 
+  spinner: boolean;
   tools: Tools;
   public isCollapsed = -1;
 
@@ -17,7 +18,9 @@ export class ToolsComponent {
                private router: Router ) {
 
     this._tools.getTools().subscribe( ( dataTools: Tools ) => {
+      this.spinner = true;
       this.tools = dataTools;
+      this.spinner = false;
     });
   }
 

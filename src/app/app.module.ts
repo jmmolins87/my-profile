@@ -26,6 +26,7 @@ import { HistoryComponent } from './components/history/history.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -43,7 +44,8 @@ const routes: Routes = [
     HistoryComponent,
     ContactComponent,
     WebComponent,
-    GraphicComponent
+    GraphicComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

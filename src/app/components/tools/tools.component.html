@@ -36,6 +36,7 @@
         <div class="container">
             <div class="row">
                 <article *ngFor="let tool of tools; let i = index" class="my-tools__tool">
+                    <app-spinner *ngIf="spinner"></app-spinner>
                     <p>
                         <button type="button" role="checkbox" [title]="tool.title" (click)="isCollapsed = i">
                             <img [src]="tool.img" [alt]="tool.title">
