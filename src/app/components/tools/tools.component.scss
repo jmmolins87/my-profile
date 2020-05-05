@@ -245,17 +245,20 @@ section {
 
             &__tool {
                 position: relative;
-                width: 90%;
                 margin: auto;
                 margin-bottom: 100px;
                 margin-top: 0px;
-                flex-basis: 100%;
+                flex-basis: 90%;
 
                 // ***** tablet *****
-                flex-basis: calc(50% - 20px);
+                @media screen and (min-width: $md) {
+                    flex-basis: calc(50% - 20px);
+                }
 
                 // ***** desktop *****
-                flex-basis: calc(33.3% - 50px);
+                @media screen and (min-width: $lg) {
+                    flex-basis: calc(33.3% - 20px);
+                }
 
                 p {
                     text-align: center;
@@ -266,14 +269,14 @@ section {
                         height: auto;
                         margin: auto;
 
+                        &:hover {
+                            mix-blend-mode: normal;
+                        }
+
                         // ***** tablet desktop *****
                         @media screen and (min-width: $md) {
                             width: auto;
                             height: 200px;
-                        }
-
-                        &:hover {
-                            mix-blend-mode: normal;
                         }
                     }
                 }
