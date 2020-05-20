@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToolsService } from '../../interfaces/services/tools.service';
+import { ToolsService } from '../../services/tools.service';
 import { Tools } from '../../interfaces/tools.interface';
 import { Router } from '@angular/router';
 
