@@ -1,6 +1,92 @@
+@import '../../../styles.scss';
+
 .hero {
     background: url('../../../assets/img/mobile/history/hero-history.png') center center no-repeat;
     height: 100vh;
     width: 100%;
     background-size: cover;
+    position: relative;
+
+    // ***** tablet *****
+    @media screen and (min-width: $md) {
+        background: url('../../../assets/img/tablet/history/hero-history.png');
+    }
+
+    // ***** desktop *****
+    @media screen and (min-width: $lg) {
+        background: url('../../../assets/img/desktop/history/hero-history.png');
+    }
+    
+    .wrap {
+        color: $text-grey-light;
+        font-weight: 200;
+
+        &__name {
+            position: absolute;
+            top: 300px;
+            left: -140px;
+            text-align: right;
+            transform: rotate(90deg);
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                top: 350px;
+            }
+
+            // ***** desktop *****
+            @media screen and (min-width: $lg) {
+                transform: rotate(0deg);
+            }
+        }
+
+        &__skills {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            text-align: center;
+
+            // ***** tablet *****
+            @media screen and (min-width: $md) {
+                padding: 20px;
+                width: 80%;
+                top: 900px;
+                -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
+            }
+
+            p {
+                margin-bottom: 0;
+
+                // ***** tablet *****
+                @media screen and (min-width: $md) {
+                    color: $text-black;
+                }
+
+                span {
+                    display: block;
+
+                    // ***** tablet *****
+                    @media screen and (min-width: $md) {
+                        display: inline-block;
+                        margin-right: 20px;
+                        &:last-of-type {
+                            margin-right: 0px;
+                        }
+
+                        &::after {
+                            content: '|';
+                            display: inline-block;
+                            margin-left: 20px;
+                        }
+
+                        &:last-of-type {
+                            &::after {
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

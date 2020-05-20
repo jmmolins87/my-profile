@@ -27,6 +27,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { CitysComponent } from './components/citys/citys.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -45,7 +46,8 @@ const routes: Routes = [
     ContactComponent,
     WebComponent,
     GraphicComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CitysComponent
   ],
   imports: [
     BrowserModule,
