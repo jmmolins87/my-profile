@@ -1,13 +1,13 @@
 <section>
-    <h1>Mi taller</h1>
-    <div class="clouds clouds--hero">
-        <img src="./assets/img/clouds/cloud1.png" style="--i:1">
-        <img src="./assets/img/clouds/cloud2.png" style="--i:2">
-        <img src="./assets/img/clouds/cloud3.png" style="--i:3">
-        <img src="./assets/img/clouds/cloud4.png" style="--i:4">
-        <img src="./assets/img/clouds/cloud5.png" style="--i:5">
-    </div>
-    <!-- <p class="chevDown">
+  <h1>Mi taller</h1>
+  <div class="clouds clouds--hero">
+    <img src="./assets/img/clouds/cloud1.png" style="--i: 1" />
+    <img src="./assets/img/clouds/cloud2.png" style="--i: 2" />
+    <img src="./assets/img/clouds/cloud3.png" style="--i: 3" />
+    <img src="./assets/img/clouds/cloud4.png" style="--i: 4" />
+    <img src="./assets/img/clouds/cloud5.png" style="--i: 5" />
+  </div>
+  <!-- <p class="chevDown">
         <button (click)="goToTools()">
             <i class="fas fa-chevron-down"></i>
         </button>
@@ -15,56 +15,70 @@
 </section>
 
 <section>
-    <div class="clouds clouds--body">
-        <img src="./assets/img/clouds/cloud1-reverse.png" style="--i:1">
-        <img src="./assets/img/clouds/cloud2-reverse.png" style="--i:2">
-        <img src="./assets/img/clouds/cloud3-reverse.png" style="--i:3">
-        <img src="./assets/img/clouds/cloud4-reverse.png" style="--i:4">
-        <img src="./assets/img/clouds/cloud5-reverse.png" style="--i:5">
-    </div>
+  <div class="clouds clouds--body">
+    <img src="./assets/img/clouds/cloud1-reverse.png" style="--i: 1" />
+    <img src="./assets/img/clouds/cloud2-reverse.png" style="--i: 2" />
+    <img src="./assets/img/clouds/cloud3-reverse.png" style="--i: 3" />
+    <img src="./assets/img/clouds/cloud4-reverse.png" style="--i: 4" />
+    <img src="./assets/img/clouds/cloud5-reverse.png" style="--i: 5" />
+  </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="offset-1 col-10">
+        <div class="info">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            nemo, sint odio non vitae voluptatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-tools" id="tools">
     <div class="container">
-        <div class="row">
-            <div class="offset-1 col-10">
-                <div class="info">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nemo, sint odio non vitae voluptatibus.</p>
+      <div class="row">
+        <article
+          *ngFor="let tool of tools; let i = index"
+          class="my-tools__tool"
+        >
+          <app-spinner *ngIf="spinner"></app-spinner>
+          <p>
+            <button
+              type="button"
+              role="checkbox"
+              [title]="tool.title"
+              (click)="isCollapsed = i"
+            >
+              <img [src]="tool.img" [alt]="tool.title" />
+            </button>
+          </p>
+          <div class="wrap-description" [collapse]="i !== isCollapsed">
+            <div class="wrap-main">
+              <h3>{{ tool.title }}</h3>
+              <p>{{ tool.description }}</p>
+              <div class="percent">
+                <span>% habilidad</span>
+                <mat-progress-bar
+                  mode="determinate"
+                  value="90"
+                ></mat-progress-bar>
+              </div>
+            </div>
+            <div *ngIf="tool.subTool" class="wrap-secondary">
+              <p>Otras utilidads</p>
+              <div class="tool-secondary">
+                <div class="tool">
+                  <h3 class="tool-title">{{ tool.subTool.title }}</h3>
+                  <img [src]="tool.subTool.img" [alt]="tool.subTool.title" />
+                  <p>{{ tool.subTool.description }}</p>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="my-tools" id="tools">
-        <div class="container">
-            <div class="row">
-                <article *ngFor="let tool of tools; let i = index" class="my-tools__tool">
-                    <app-spinner *ngIf="spinner"></app-spinner>
-                    <p>
-                        <button type="button" role="checkbox" [title]="tool.title" (click)="isCollapsed = i">
-                            <img [src]="tool.img" [alt]="tool.title">
-                        </button>
-                    </p>
-                    <div class="wrap-description" [collapse]="i!==isCollapsed">
-                        <div class="wrap-main">
-                            <h3>{{ tool.title }}</h3>
-                            <p>{{ tool.description }}</p>
-                            <div class="percent">
-                                <span>% habilidad</span>
-                                <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-                            </div>
-                        </div>
-                        <div *ngIf="tool.subTool" class="wrap-secondary">
-                            <p>Otras utilidads</p>
-                            <div class="tool-secondary">
-                                <div class="tool">
-                                    <h3 class="tool-title">{{ tool.subTool.title }}</h3>
-                                    <img [src]="tool.subTool.img" [alt]="tool.subTool.title">
-                                    <p>{{ tool.subTool.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div>
-    <div class="deco-end-tools"></div>
+  </div>
+  <div class="deco-end-tools"></div>
 </section>
